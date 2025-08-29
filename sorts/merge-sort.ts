@@ -17,7 +17,7 @@ function merge(left: number[], right: number[]): number[] {
     if (left[i] < right[j]) {
       res.push(left[i++]);
     } else {
-      res.push[right[j++]];
+      res.push(right[j++]);
     }
   }
 
