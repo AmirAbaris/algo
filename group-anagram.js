@@ -4,12 +4,12 @@ function groupAnagrams(strs) {
         var word = strs_1[_i];
         var sorted = word.split("").sort().join("");
         map.set(sorted, [word]);
-        // if (!map.has(sorted)) {
-        //   map.set(sorted, [word]);
-        // } else {
-        //   map.get(sorted)!.push(word);
-        // }
-        console.log(map);
+        if (!map.has(sorted)) {
+            map.set(sorted, [word]);
+        }
+        else {
+            map.get(sorted).push(word);
+        }
     }
     return Array.from(map.values());
 }
